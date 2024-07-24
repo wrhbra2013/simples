@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<title> E.E. Americo Franco </title>
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/default.css">
+	<link rel="shortcut icon" href="/static/css/favicon.ico" />
+	
+	
+</head>
+<body>
+	<a href="/logout"><button> SAIR</button></a>
+    <a href="/menu"><img src ="/static/css/escola.jpeg" alt="" id="imagem"></img></a>
+<br>
+<a href="https://sed.educacao.sp.gov.br/"> Secretaria Escolar Digital </a>
+<br>
+<br>
+<h1> CRSE </h1>
+<h1> Controle de Registros da Secretaria Escolar </h1>
+<br>
+<br>
+<h1> PÁGINA DE ERRO </h1>
+<br>
+<br>
+<div class="error">
+	<h1 id="message"> Falha na escrita SQL</h1>
+<br>
+<br>
+<%if(typeof error == "undefined"){%>
+	<%}else{%>
+<h1 id="message"><%= error.message %></h1>
+   <%}%>
+
+</div>
+
+<br>
+<br>
+<h2><a href="/menu"> Voltar. </a></h2>
+
+<p> EE Americo Franco Poá_SP </p>
+</body>
+</html>

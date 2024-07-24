@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<title> E.E. Americo Franco </title>
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/default.css">
+	<link rel="shortcut icon" href="/static/css/favicon.ico" />
+	
+	
+</head>
+<body>
+	
+<a href="/logout"><button> SAIR</button></a>
+<a href="/menu"><img src ="/static/css/escola.jpeg" alt="" id="imagem"></img></a>
+<br>
+<a href="https://sed.educacao.sp.gov.br/"> Secretaria Escolar Digital </a>
+   
+
+
+<a href="/alunos"><button> ALUNO</button></a>
+<a href="/servidores"><button>SERVIDORES</button></a>
+<a href="/materiais"><button>MATERIAIS</button></a>
+<a href="/agendamento"><button>AGENDAMENTO</button></a>
+<a href="/devolucao"><button>DEVOLUÇÃO</button></a>
+<a href="/pesquisa_servidores"><button>PESQUISA_SERVIDORES</button></a>
+
+	
+ 
+	<form action="/servidores" id="servidores" method="post">
+		<div class ="contrast">
+			
+		<br>
+		<h1> CADASTRO DE SERVIDORES.</h1>
+		<br>
+		<label>Matricula</label> 
+		<input type="text" id="form_matricula" name="form_matricula"/>
+		<label> Nome </label>
+		<input type="text" id="form_nome" name="form_nome" />
+       	<label> Cargo</label>
+		<input type="text" id="form_cargo"  name="form_cargo"/>
+		<label> Telefone </label>
+        <input type="tel" id="form_tel"  name="form_tel"  />
+		<label> Email</label>
+       	<input type="text" id="form_email" name="form_email" />
+	
+	<br>
+	<br>
+
+	<button type="submit"  id ="btn_inserir"  class="btn" onclick="inserir()">Novo</button>
+	<button type="submit"  id="btn_reset" class="btn" onclick="limpar()">Limpar_Campos</button>
+
+	<br>
+    <br>
+	<hr>
+		</div>
+	
+	
+	</form>   
+
+	
+	
+	
+<!-- Carregar arquivo JS depois de renderizado HTML-->
+<script  src="/script/servidores.js"></script>
+</body>
+
+</html>

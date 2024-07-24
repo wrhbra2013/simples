@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<title> E.E. Americo Franco </title>
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/default.css">
+	<link rel="shortcut icon" href="/static/css/favicon.ico" />
+	
+	
+</head>
+<body>
+	<a href="/logout"><button> SAIR</button></a>
+	<a href="/menu"><img src ="/static/css/escola.jpeg" alt="" id="imagem"></img></a>
+<br>
+<a href="https://sed.educacao.sp.gov.br/"> Secretaria Escolar Digital </a>
+   
+
+
+<a href="/alunos"><button> ALUNO</button></a>
+<a href="/servidores"><button>SERVIDORES</button></a>
+<a href="/materiais"><button>MATERIAIS</button></a>
+<a href="/agendamento"><button>AGENDAMENTO</button></a>
+<a href="/devolucao"><button>DEVOLUÇÃO</button></a>
+<a href="/pesquisa_materiais"><button>PESQUISA_MATERIAIS</button></a>
+	
+
+
+	<Form action="/materiais" id="materiais" method="post">
+		<br>
+		<h1> CADASTRO DE MATERIAIS.</h1>
+       <br>
+		<label> Ativo </label>
+		<input type="text"  id="form_ativo" name="form_ativo" />
+        
+		<label> Descrição </label>
+		<input type="text" id="form_descricao" name="form_descricao" />
+
+        <label> Tipo Periférico</label>
+		<input type="text" id="form_periferico" name="form_periferico" />
+
+	   <label> Avarias </label>
+		<input type="text" id="form_avarias"  name="form_avarias"/>
+		<br>	
+		<br>
+		<button type="submit"  class="btn btn-primary" onclick="inserir()">Novo</button>
+	    <button type="submit" class="btn btn-primary"  id="btn_reset" onclick="limpar()">Limpar_Campos</button>
+       	<br>
+		<br>	
+		<hr>
+
+		
+	<!--saida html-->
+   
+	</form>
+	
+	<!-- Carregar arquivo JS depois de renderizado HTML-->
+<script  src="/script/materiais.js"></script>
+</body>
+
+</html>

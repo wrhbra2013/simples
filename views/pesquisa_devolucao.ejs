@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<title> E.E. Americo Franco </title>
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/default.css">
+	<link rel="shortcut icon" href="/static/css/favicon.ico" />
+	
+	
+</head>
+<body>
+	<a href="/logout"><button> SAIR</button></a>
+	<a href="/menu"><img src ="/static/css/escola.jpeg" alt="" id="imagem"></img></a>
+	<br>
+	<a href="https://sed.educacao.sp.gov.br/"> Secretaria Escolar Digital </a>
+	   
+	
+	
+	<a href="/alunos"><button> ALUNO</button></a>
+	<a href="/servidores"><button>SERVIDORES</button></a>
+	<a href="/materiais"><button>MATERIAIS</button></a>
+	<a href="/agendamento"><button>AGENDAMENTO</button></a>
+	<a href="/devolucao"><button>DEVOLUÇÃO</button></a>
+	
+
+<form action="/pesquisa_devolucao" id="pesquisa" method="post">
+	<div class="pesquisa">
+		<br>
+		<h1> INFORMAÇÕES RÁPIDAS.</h1>
+		<br>
+		<label>Pesquisa</label>
+		<input type="text" name="form_busca" />
+		<br>
+		<br>
+	
+		<button type="submit"   class="btn" id="btn_busca" name ="btn_busca" onclick="pesquisa()"> Pesquisar </button>  
+		<br>
+		<br>
+		<hr>
+		
+		   <!--saida html-->
+		   <table id="tabela">
+			<tr>
+					<td>Material</td>
+					<td>None</td>
+					<td>Conservação</td>
+					<td>Periodo_Carencia</td>
+					<td>Previsão Retorno</td>
+				</tr>
+					<!-- Variaveis EJS-->
+				<% var devolucao; %>
+				<% devolucao.forEach(devolucao => { %> 
+					<tr>
+						<td> <%- devolucao.Descricao %></td>
+						<td><%- devolucao.Nome %> </td>
+						<td><%- devolucao.Conservacao %></td>
+						<td><%- devolucao.Carencia %></td>
+						<td><%- devolucao.Retorno %></td>
+						</tr>
+					
+				<% }); %>			   
+			</table>
+			
+	</div>
+  
+</form>
+
+	
+<!-- Carregar arquivo JS depois de renderizado HTML-->
+<script  src="/script/pesquisa_devolucao.js"></script>
+</body>
+
+</html>

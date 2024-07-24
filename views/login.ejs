@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<title> E.E. Americo Franco </title>
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/default.css">
+	<link rel="shortcut icon" href="/static/css/favicon.ico" />
+	
+	
+</head>
+<body class="login">
+<a href="#" onclick="contrast()">Contrast</a>
+<a href="#" onclick="font_mais()">Font+</a>
+<a href="#" onclick="font_menos()">Font-</a>
+<br>
+<br>
+	<img src ="/static/css/escola.jpeg" alt="" id="imagem"></img>
+<br>
+<a href="https://sed.educacao.sp.gov.br/"> Secretaria Escolar Digital </a>
+<br>
+<br>
+<h1> CRSE </h1>
+<h1> Controle de Registros da Secretaria Escolar </h1>
+
+
+<br>
+<br>
+<h1> Autenticação </h1>
+<br>
+<br>
+
+<form action="/login"  method="post" >
+<label> Email: </label><input type="text" name="f_email" id="form_email" />
+<br>
+<br>
+<label> Senha: </label><input type="password" name="f_senha" id="form_senha" />
+<br>
+<br>
+<br>
+<button type="submit" name="btn_entrar" onclick="consultar()" >Entrar</button>
+<br>
+<br>
+<a href="novo"> Novo usuário </a>
+</form>
+
+
+<p> EE Americo Franco Poá_SP </p>
+
+
+
+
+
+
+<script src="/script/login.js" ></script>
+</body>
+</html>

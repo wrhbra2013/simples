@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Alunos</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/default.css"></link>
+    <link rel="shortcut icon" href="/static/css/favicon.ico" />
+	
+</head>
+<body> <!---- DETERMINA OS DADOS APRESENTADOS NA PÁGINA ESTE É 
+    CORPO ESTE É O HTML-->
+   
+    <a href="/logout"><button> SAIR</button></a>
+	<a href="/menu"><img src ="/static/css/escola.jpeg" alt="" id="imagem"></img></a>
+<br>
+<a href="https://sed.educacao.sp.gov.br/"> Secretaria Escolar Digital </a>
+   
+
+
+<a href="/alunos"><button> ALUNO</button></a>
+<a href="/servidores"><button>SERVIDORES</button></a>
+<a href="/materiais"><button>MATERIAIS</button></a>
+<a href="/agendamento"><button>AGENDAMENTO</button></a>
+<a href="/devolucao"><button>DEVOLUÇÃO</button></a>
+<a href="/pesquisa_alunos"><button>PESQUISA_ALUNOS</button></a>
+
+    <h1>REGISTRO DE ALUNOS.</h1>
+   <br>
+    
+   
+
+    <form action="/alunos" id="alunos" method="post" >
+        <label>Nome:</label>
+        <input type="text" name="nome" id="nome" />
+        <label>Matrícula:</label>
+        <input type="number" name="matricula" id="matricula" />
+        <label>Registro:</label>
+        <input type="number" name="ra" id="ra"/>
+        <br>
+        <br>
+        <!--<input type="button" value="Incluir" onclick="incluir_aluno()">-->
+        <button type="submit" class="btn" onclick="adicionar_registro()">Adicionar</button>
+        <button type="submit"  class="btn" id="btn_reset" onclick="limpar()">Limpar_Campos</button>
+        <br>
+        <br>
+    
+        
+    </form>
+       
+    <script src="/script/cadastroalunov6.js"> </script>
+    
+</body>
+</html>

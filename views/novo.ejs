@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<title> E.E. Americo Franco </title>
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/default.css">
+	<link rel="shortcut icon" href="/static/css/favicon.ico" />
+	
+	
+</head>
+<body>
+	
+
+<img src ="/static/css/escola.jpeg" alt="" id="imagem"></img>
+<br>
+<a href="https://sed.educacao.sp.gov.br/"> Secretaria Escolar Digital </a>
+<br>
+<br>
+<h1> CRSE </h1>
+<h1> Controle de Registros da Secretaria Escolar </h1>
+<br>
+<br>
+<h1> Cadastro de novos usuários.</h1>
+<br>
+<br>
+<form action="/novo" id="novo" method="post">
+
+<label>Novo Email: </label>
+<input type="text" name="f_email" id="form_email" />
+<br>
+<br>
+<label> Nova senha: </label>
+<!-- name = req.body e id = javascript.-->
+<input type="password" name="f_nova_senha" id="form_nova_senha" />
+<br>
+<label> Redigitar : </label>
+<input type="password" name="f_confirme_nova_senha" id="form_confirme_nova_senha" /><br>
+<button type="submit" onclick="registrar()" >Registrar</button>
+</form>
+<br>
+<br>
+<a href="/login"> Autenticar </a>
+<br>
+<br>
+<p> EE Americo Franco Poá_SP </p>
+
+<script src="/script/novo.js" ></script>
+</body>
+</html>
+

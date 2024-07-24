@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<title> E.E. Americo Franco </title>
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/default.css">
+	<link rel="shortcut icon" href="/static/css/favicon.ico" />
+	
+	
+</head>
+<body>
+	<a href="/logout"><button> SAIR</button></a>
+	<a href="/menu"><img src ="/static/css/escola.jpeg" alt="" id="imagem"></img></a>
+	<br>
+	<a href="https://sed.educacao.sp.gov.br/"> Secretaria Escolar Digital </a>
+	   
+	
+	
+	<a href="/alunos"><button> ALUNO</button></a>
+	<a href="/servidores"><button>SERVIDORES</button></a>
+	<a href="/materiais"><button>MATERIAIS</button></a>
+	<a href="/agendamento"><button>AGENDAMENTO</button></a>
+	<a href="/devolucao"><button>DEVOLUÇÃO</button></a>
+	<a href="/pesquisa_devolucao"><button>PESQUISA_DEVOLUÇÃO</button></a>
+
+	<form action="/devolucao" id="devolucao" method="post">
+		<br>
+				<h1> DEVOLUÇÕES.</h1>
+		<br>
+		<label>Material </label>
+		<input type="text" id="form_descricao" name="form_descricao" />
+
+		<label> Nome </label>
+        <input type="text" id="form_nome" name="form_nome" />
+
+		<label> Conservação</label>
+		<input type="text" id="form_conservacao" name="form_conservacao" />
+
+		<label> Carencia </label>
+	   <input type="date" id="form_carencia" name="form_carencia"  />
+	   <label> Retorno </label>
+	   <input type="date" id="form_retorno" name="form_retorno"  />
+	   	<br>
+	   <br>
+	   <button type="submit"  class="btn btn-primary" onclick="inserir()">Novo</button>
+	   <button type="submit" class="btn btn-primary" id="btn_reset" onclick="limpar()">Limpar_Campos</button>
+	   <br>
+	   <br>
+	   <hr>
+
+	 
+	
+</form>
+
+	
+	
+<!-- Carregar arquivo JS depois de renderizado HTML-->
+<script  src="/script/devolucao.js"></script>
+</body>
+
+</html>

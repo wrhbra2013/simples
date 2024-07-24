@@ -1,0 +1,41 @@
+CREDENCIAIS AMERICO FRANCO
+
+GMAIL: 
+login: americofranco086@gmail.com
+senha: a_franco
+
+HOTMAIL
+login: americofranco086@outlook.com
+senha; a_franco
+
+GITHUB:
+login: americofranco
+senha: a_franco086
+email: americofranco086@gmail.com
+
+HEROKU:
+login: americofranco086gmail.com
+senha: a_franco086 
+
+//CREDENCIAIS HEROKU POSTGRES
+SERVICE heroku-postgresql
+PLAN hobby-dev
+APP americofranco
+
+Database Credentials
+
+IMPORTANT
+
+Get credentials for manual connections to this database.
+Please note that these credentials are not permanent.
+Heroku rotates credentials periodically and updates applications where this database is attached.
+
+HOST:   ec2-44-206-11-200.compute-1.amazonaws.com
+DATABASE:  dd6rahakq2ptgu
+USER:  zrkcvgistijgus
+PORT:  5432
+PASSWORD:   9452e5c78cfe6ffd32a95cf1a6c17b252b93cdeb15523e299b7ac0bf65db1c29
+URI:   'postgres://zrkcvgistijgus:9452e5c78cfe6ffd32a95cf1a6c17b252b93cdeb15523e299b7ac0bf65db1c29@ec2-44-206-11-200.compute-1.amazonaws.com:5432/dd6rahakq2ptgu'
+
+
+Heroku CLI:   heroku pg:psql postgresql-slippery-99063 --app americofranco

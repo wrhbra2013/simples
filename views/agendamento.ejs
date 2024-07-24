@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<title> E.E. Americo Franco </title>
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/default.css">
+	<link rel="shortcut icon" href="/static/css/favicon.ico" />
+	
+	
+</head>
+<body>
+	 <a href="/logout"><button> SAIR</button></a>
+	<a href="/menu"><img src ="/static/css/escola.jpeg" alt="" id="imagem"></img></a>
+<br>
+<a href="https://sed.educacao.sp.gov.br/"> Secretaria Escolar Digital </a>
+   
+
+
+<a href="/alunos"><button> ALUNO</button></a>
+<a href="/servidores"><button>SERVIDORES</button></a>
+<a href="/materiais"><button>MATERIAIS</button></a>
+<a href="/agendamento"><button>AGENDAMENTO</button></a>
+<a href="/devolucao"><button>DEVOLUÇÃO</button></a>
+<a href="/pesquisa_agendamento"><button>PESQUISA_AGEDAMENTO</button></a>
+
+
+	<form action="/agendamento" id="agendamento" method="post">
+		<br>
+		<br>
+		<h1> AGENDAMENTO.</h1>
+        <br>
+		<br>
+		<label>Material </label>
+		<input type="text" id="form_descricao" name="form_descricao" />
+
+		<label> Nome </label>
+        <input type="text" id="form_nome" name="form_nome" />
+
+
+		<label>Local_Uso</label>
+		<input type="text" id="form_local_uso" name="form_local_uso" />
+
+		<label> Saida </label>
+		<input type="date" id="form_saida" name="form_saida"/>
+        
+		<label> Retorno</label>
+	    <input type="date" id="form_retorno" name="form_retorno" />
+	<br>
+	<br>
+	<button type="submit"   onclick="inserir()">Novo</button>
+	<button type="submit" id="btn_reset" class="btn btn-primary" onclick="limpar()">Limpar_Campos</button>
+	<br>
+	<br>
+	
+	<hr>
+	
+	
+</form>
+
+	
+	<!-- Carregar arquivo JS depois de renderizado HTML-->
+<script  src="/script/agendamento.js"></script>
+</body>
+
+

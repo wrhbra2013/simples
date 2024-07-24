@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+
+	<title> E.E. Americo Franco </title>
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/default.css">
+	<link rel="shortcut icon" href="/static/css/favicon.ico" />
+	
+	
+</head>
+<body>
+	<a href="/logout"><button> SAIR</button></a>
+	<a href="/menu"><img src ="/static/css/escola.jpeg" alt="" id="imagem"></img></a>
+	<br>
+	<a href="https://sed.educacao.sp.gov.br/"> Secretaria Escolar Digital </a>
+	   
+	
+	
+	<a href="/alunos"><button> ALUNO</button></a>
+	<a href="/servidores"><button>SERVIDORES</button></a>
+	<a href="/materiais"><button>MATERIAIS</button></a>
+	<a href="/agendamento"><button>AGENDAMENTO</button></a>
+	<a href="/devolucao"><button>DEVOLUÇÃO</button></a>
+	
+
+<form action="/pesquisa_agendamento" id="pesquisa" method="post">
+	<div class="pesquisa">
+       <br>
+   <br>
+
+	<h1> INFORMAÇÕES RÁPIDAS.</h1>
+	<br>
+	<label>Pesquisa</label>
+	<input type="text" name="form_busca" />
+	<br>
+	<br>
+
+	<button type="submit"   class="btn" id="btn_busca" name ="btn_busca" onclick="pesquisa()"> Pesquisar </button>  
+	<br>
+	<br>
+	<hr>
+	
+
+	<!--saida html-->
+	
+	<table id="tabela">
+		<thead>
+			<tr>
+				<th>Material</th>
+			    <th>Nome</th>
+				<th>Local de Uso</th>
+				<th>Saida</th>
+				<th>Previsão Retorno</th>
+				<!-- Variaveis EJS-->
+			<% var agendamentos; %>
+			<% agendamentos.forEach(agendamentos => { %> 
+				<tr>
+					<td> <%- agendamentos.Descricao %></td>
+					<td><%- agendamentos.Nome %> </td>
+					<td><%- agendamentos.Local_Uso %></td>
+					<td><%- agendamentos.Saida %></td>
+					<td> <%- agendamentos.Retorno %></td>
+				</tr>
+				
+			<% }); %>
+	    </table>
+
+	</div>
+</form>
+<!-- Carregar arquivo JS depois de renderizado HTML-->
+<script  src="/script/pesquisa_agendamento.js"></script>
+</body>
+
+</html>
